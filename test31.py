@@ -276,10 +276,10 @@ class Ui_CarParking(object):
         self.NEXT2.clicked.connect(self.go2)
         self.NEXT3.clicked.connect(self.go3)
         self.NEXT4.clicked.connect(self.go4)
-        self.DONE.clicked.connect(self.go5)
-        self.BACK2.clicked.connect(self.go6)
-        self.BACK3.clicked.connect(self.go7)
-        self.BACK4.clicked.connect(self.go8)
+        self.DONE.clicked.connect(CarParking.close)
+        self.BACK2.clicked.connect(self.go5)
+        self.BACK3.clicked.connect(self.go6)
+        self.BACK4.clicked.connect(self.go7)
 
         #SelectMarket(ComboBox)
 
@@ -315,10 +315,8 @@ class Ui_CarParking(object):
     def go5(self):
         self.stackedWidget.setCurrentIndex(0)
     def go6(self):
-        self.stackedWidget.setCurrentIndex(0)
-    def go7(self):
         self.stackedWidget.setCurrentIndex(1)
-    def go8(self):
+    def go7(self):
         self.stackedWidget.setCurrentIndex(2)
 
     ##SelectMarket
