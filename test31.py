@@ -27,18 +27,18 @@ class Ui_CarParking(object):
         self.stackedWidget.setGeometry(QtCore.QRect(-1, -2, 601, 611))
         self.stackedWidget.setObjectName("stackedWidget")
         self.page1 = QtWidgets.QWidget()
-        self.page1.setObjectName("page1")
+        self.page1.setObjectName("page1") #pagename
         self.label_7 = QtWidgets.QLabel(self.page1)
         self.label_7.setGeometry(QtCore.QRect(0, 0, 601, 601))
         self.label_7.setText("")
         self.label_7.setPixmap(QtGui.QPixmap("../../Downloads/Express Yourself 70\'s Social Post (8).jpg"))
         self.label_7.setScaledContents(True)
-        self.label_7.setObjectName("label_7")
-        self.NEXT1 = QtWidgets.QPushButton(self.page1)
+        self.label_7.setObjectName("label_7") 
+        self.NEXT1 = QtWidgets.QPushButton(self.page1) #clicknext
         self.NEXT1.setGeometry(QtCore.QRect(460, 40, 101, 51))
         self.NEXT1.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
-"background-color: rgb(255, 255, 127);")
-        self.NEXT1.setObjectName("NEXT1")
+"background-color: rgb(255, 255, 127);") #font_next
+        self.NEXT1.setObjectName("NEXT1") #clickname
         self.stackedWidget.addWidget(self.page1)
 
 
@@ -46,17 +46,17 @@ class Ui_CarParking(object):
 
 
         self.page2 = QtWidgets.QWidget()
-        self.page2.setObjectName("page2")
+        self.page2.setObjectName("page2") #pagename
         self.label_2 = QtWidgets.QLabel(self.page2)
         self.label_2.setGeometry(QtCore.QRect(0, 0, 621, 621))
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap("../../Downloads/carbg2.1.jpg"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
-        self.Market = QtWidgets.QComboBox(self.page2)
+        self.Market = QtWidgets.QComboBox(self.page2) #clicknext
         self.Market.setGeometry(QtCore.QRect(180, 190, 261, 41))
         self.Market.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
-"background-color: rgb(255, 170, 127);")
+"background-color: rgb(255, 170, 127);") #font_next
         self.Market.setEditable(True)
         self.Market.setObjectName("Market")
         self.Market.addItem("")
@@ -66,7 +66,7 @@ class Ui_CarParking(object):
         self.ParkingSlot = QtWidgets.QComboBox(self.page2)
         self.ParkingSlot.setGeometry(QtCore.QRect(260, 460, 81, 41))
         self.ParkingSlot.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
-"background-color: rgb(255, 170, 127);\n"
+"background-color: rgb(255, 170, 127);\n" #font_parkingslot
 "")
         self.ParkingSlot.setObjectName("ParkingSlot")
         self.ParkingSlot.addItem("")
@@ -131,7 +131,7 @@ class Ui_CarParking(object):
 
 
         self.page3 = QtWidgets.QWidget()
-        self.page3.setObjectName("page3")
+        self.page3.setObjectName("page3") #pagename
         self.label = QtWidgets.QLabel(self.page3)
         self.label.setGeometry(QtCore.QRect(0, 0, 611, 601))
         self.label.setStyleSheet("background-color: rgb(255, 170, 127);\n"
@@ -169,7 +169,7 @@ class Ui_CarParking(object):
 
 
         self.page4 = QtWidgets.QWidget()
-        self.page4.setObjectName("page4")
+        self.page4.setObjectName("page4") #pagename
         self.label_3 = QtWidgets.QLabel(self.page4)
         self.label_3.setGeometry(QtCore.QRect(0, 0, 601, 601))
         self.label_3.setText("")
@@ -188,7 +188,7 @@ class Ui_CarParking(object):
         self.MarketName.setObjectName("MarketName")
         self.MarketHour = QtWidgets.QLabel(self.page4)
         self.MarketHour.setGeometry(QtCore.QRect(280, 330, 221, 41))
-        self.MarketHour.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
+        self.MarketHour.setStyleSheet("font: 87 9pt \"Segoe UI Black\";\n"
 "background-color: rgb(255, 170, 127);")
         self.MarketHour.setObjectName("MarketHour")
         self.MarketTotal = QtWidgets.QLabel(self.page4)
@@ -234,7 +234,7 @@ class Ui_CarParking(object):
         self.MarketNameBill.setObjectName("MarketNameBill")
         self.MarketHourBill = QtWidgets.QLabel(self.page5)
         self.MarketHourBill.setGeometry(QtCore.QRect(270, 340, 231, 41))
-        self.MarketHourBill.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
+        self.MarketHourBill.setStyleSheet("font: 87 9pt \"Segoe UI Black\";\n"
 "background-color: rgb(255, 170, 127);")
         self.MarketHourBill.setObjectName("MarketHourBill")
         self.MarketTotalBill = QtWidgets.QLabel(self.page5)
@@ -327,12 +327,13 @@ class Ui_CarParking(object):
         
         self.marketzone = self.Market.currentText()
 
+        #result_zone
         self.MarketName.setText(" "+self.marketzone)
         self.MarketNameBill.setText(" "+self.marketzone)
 
     ##SelectTime
 
-    #howmanytime(page3)
+    #howmanyhours(page3)
 
     def time(self):
         time_hour = 0
@@ -350,55 +351,38 @@ class Ui_CarParking(object):
 
     #parkingtime(page4,5)
 
-        x_all = "09.00"
-        y_all = "05.00"
         if self.hour1.isChecked():
-            x = "05.00"
-            y = "06.00"
-            if x <= x_all:
-                x_all = x
-            if y >= y_all:
-                y_all = y
-
+            z1 = "05.00-06.00,"
+        else:
+            z1 = ""
 
         if self.hour2.isChecked():
-            x = "06.00"
-            y = "07.00"
-            if x <= x_all:
-                x_all = x
-            if y >= y_all:
-                y_all = y
-                
+            z2 = "06.00-07.00,"
+        else:
+            z2 = ""
 
         if self.hour3.isChecked():
-            x = "07.00"
-            y = "08.00"
-            if x <= x_all:
-                x_all = x
-            if y >= y_all:
-                y_all = y
-
+            z3 = "07.00-08.00,"
+        else:
+            z3 = ""
 
         if self.hour4.isChecked():
-            x = "08.00"
-            y = "09.00"
-            if x <= x_all:
-                x_all = x
-            if y >= y_all:
-                y_all = y
-        
+            z4 = "08.00-09.00"
+        else:
+            z4 = ""
+
         #result_hour_page3
         self.Hour.setText("  "+str(time_hour))
         #result_total_page3
         self.Total.setText("  "+str(total))
 
         #result_time_page4
-        self.MarketHour.setText("  "+str(x_all)+"-"+str(y_all))
+        self.MarketHour.setText(str(z1)+str(z2)+"\n"+str(z3)+str(z4))
         #result_total_page4
         self.MarketTotal.setText("  "+str(total))
 
         #result_time_page5
-        self.MarketHourBill.setText("  "+str(x_all)+"-"+str(y_all))
+        self.MarketHourBill.setText(str(z1)+str(z2)+"\n"+str(z3)+str(z4))
         #result_total_page5
         self.MarketTotalBill.setText("  "+str(total))
 
