@@ -56,7 +56,7 @@ class Ui_CarParking(object):
         self.Market = QtWidgets.QComboBox(self.page2) #clicknext
         self.Market.setGeometry(QtCore.QRect(180, 190, 261, 41))
         self.Market.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
-"background-color: rgb(255, 170, 127);") #font_next
+"background-color: rgb(255, 170, 127);") #font_market
         self.Market.setEditable(True)
         self.Market.setObjectName("Market")
         self.Market.addItem("")
@@ -140,7 +140,7 @@ class Ui_CarParking(object):
         self.label.setPixmap(QtGui.QPixmap("../../Downloads/carbg3.1.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
-        self.NEXT3 = QtWidgets.QPushButton(self.page3)
+        self.NEXT3 = QtWidgets.QPushButton(self.page3)#clicknext
         self.NEXT3.setGeometry(QtCore.QRect(480, 40, 91, 51))
         self.NEXT3.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
 "background-color: rgb(255, 255, 127);")
@@ -176,7 +176,7 @@ class Ui_CarParking(object):
         self.label_3.setPixmap(QtGui.QPixmap("../../Downloads/carbg4.7.jpg"))
         self.label_3.setScaledContents(True)
         self.label_3.setObjectName("label_3")
-        self.NEXT4 = QtWidgets.QPushButton(self.page4)
+        self.NEXT4 = QtWidgets.QPushButton(self.page4)#clicknext
         self.NEXT4.setGeometry(QtCore.QRect(470, 40, 91, 51))
         self.NEXT4.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
 "background-color: rgb(255, 255, 127);")
@@ -242,7 +242,7 @@ class Ui_CarParking(object):
         self.MarketTotalBill.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
 "background-color: rgb(255, 170, 127);")
         self.MarketTotalBill.setObjectName("MarketTotalBill")
-        self.DONE = QtWidgets.QPushButton(self.page5)
+        self.DONE = QtWidgets.QPushButton(self.page5)#clicknext
         self.DONE.setGeometry(QtCore.QRect(480, 40, 91, 51))
         self.DONE.setStyleSheet("font: 87 14pt \"Segoe UI Black\";\n"
 "background-color: rgb(255, 255, 127);")
@@ -327,7 +327,7 @@ class Ui_CarParking(object):
         
         self.marketzone = self.Market.currentText()
 
-        #result_zone
+        #result_zone(page4,5)
         self.MarketName.setText(" "+self.marketzone)
         self.MarketNameBill.setText(" "+self.marketzone)
 
